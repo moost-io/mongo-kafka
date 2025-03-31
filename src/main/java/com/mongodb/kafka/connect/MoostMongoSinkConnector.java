@@ -39,7 +39,7 @@ import com.mongodb.kafka.connect.sink.MongoSinkTask;
 import com.mongodb.kafka.connect.sink.MongoSinkTopicConfig;
 import com.mongodb.kafka.connect.util.ConfigHelper;
 
-public class MongoSinkConnector extends SinkConnector {
+public class MoostMongoSinkConnector extends SinkConnector {
   private static final List<String> REQUIRED_SINK_ACTIONS = asList("insert", "update", "remove");
   private static final List<String> REQUIRED_COLLSTATS_SINK_ACTIONS =
       asList("insert", "update", "remove", "collStats");

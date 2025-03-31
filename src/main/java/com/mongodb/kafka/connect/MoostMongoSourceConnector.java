@@ -33,7 +33,7 @@ import com.mongodb.kafka.connect.source.MongoSourceConfig;
 import com.mongodb.kafka.connect.source.MongoSourceTask;
 import com.mongodb.kafka.connect.util.ConfigHelper;
 
-public class MongoSourceConnector extends SourceConnector {
+public class MoostMongoSourceConnector extends SourceConnector {
   private static final List<String> REQUIRED_SOURCE_ACTIONS = asList("changeStream", "find");
   private Map<String, String> settings;
 

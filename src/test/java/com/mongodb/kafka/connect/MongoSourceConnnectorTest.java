@@ -35,7 +35,7 @@ class MongoSourceConnnectorTest {
   @Test
   @DisplayName("Should return the expected version")
   void testVersion() {
-    MongoSourceConnector sourceConnector = new MongoSourceConnector();
+    MoostMongoSourceConnector sourceConnector = new MoostMongoSourceConnector();
 
     assertEquals(Versions.VERSION, sourceConnector.version());
   }
@@ -43,7 +43,7 @@ class MongoSourceConnnectorTest {
   @Test
   @DisplayName("test task class")
   void testTaskClass() {
-    MongoSourceConnector sourceConnector = new MongoSourceConnector();
+    MoostMongoSourceConnector sourceConnector = new MoostMongoSourceConnector();
 
     assertEquals(MongoSourceTask.class, sourceConnector.taskClass());
   }
@@ -51,7 +51,7 @@ class MongoSourceConnnectorTest {
   @Test
   @DisplayName("test task configs")
   void testConfig() {
-    MongoSourceConnector sourceConnector = new MongoSourceConnector();
+    MoostMongoSourceConnector sourceConnector = new MoostMongoSourceConnector();
 
     assertEquals(MongoSourceConfig.CONFIG, sourceConnector.config());
   }
@@ -59,7 +59,7 @@ class MongoSourceConnnectorTest {
   @Test
   @DisplayName("test task configs")
   void testTaskConfigs() {
-    MongoSourceConnector sourceConnector = new MongoSourceConnector();
+    MoostMongoSourceConnector sourceConnector = new MoostMongoSourceConnector();
     Map<String, String> configMap =
         new HashMap<String, String>() {
           {

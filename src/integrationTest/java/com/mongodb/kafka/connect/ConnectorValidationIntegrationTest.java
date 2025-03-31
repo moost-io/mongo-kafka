@@ -498,7 +498,7 @@ public final class ConnectorValidationIntegrationTest {
   }
 
   private List<ConfigValue> getSourceErrors(final Map<String, String> properties) {
-    Config config = new MongoSourceConnector().validate(properties);
+    Config config = new MoostMongoSourceConnector().validate(properties);
     return config.configValues().stream()
         .filter(cv -> !cv.errorMessages().isEmpty())
         .collect(Collectors.toList());
@@ -544,7 +544,7 @@ public final class ConnectorValidationIntegrationTest {
   }
 
   private List<ConfigValue> getSinkErrors(final Map<String, String> properties) {
-    Config config = new MongoSinkConnector().validate(properties);
+    Config config = new MoostMongoSinkConnector().validate(properties);
     return config.configValues().stream()
         .filter(cv -> !cv.errorMessages().isEmpty())
         .collect(Collectors.toList());

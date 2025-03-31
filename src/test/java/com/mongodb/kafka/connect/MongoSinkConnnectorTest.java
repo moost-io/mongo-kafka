@@ -36,7 +36,7 @@ class MongoSinkConnnectorTest {
   @Test
   @DisplayName("Should return the expected version")
   void testVersion() {
-    MongoSinkConnector sinkConnector = new MongoSinkConnector();
+    MoostMongoSinkConnector sinkConnector = new MoostMongoSinkConnector();
 
     assertEquals(Versions.VERSION, sinkConnector.version());
   }
@@ -44,7 +44,7 @@ class MongoSinkConnnectorTest {
   @Test
   @DisplayName("test task class")
   void testTaskClass() {
-    MongoSinkConnector sinkConnector = new MongoSinkConnector();
+    MoostMongoSinkConnector sinkConnector = new MoostMongoSinkConnector();
 
     assertEquals(MongoSinkTask.class, sinkConnector.taskClass());
   }
@@ -52,7 +52,7 @@ class MongoSinkConnnectorTest {
   @Test
   @DisplayName("test task configs")
   void testConfig() {
-    MongoSinkConnector sinkConnector = new MongoSinkConnector();
+    MoostMongoSinkConnector sinkConnector = new MoostMongoSinkConnector();
 
     assertEquals(MongoSinkConfig.CONFIG, sinkConnector.config());
   }
@@ -60,7 +60,7 @@ class MongoSinkConnnectorTest {
   @Test
   @DisplayName("test task configs")
   void testTaskConfigs() {
-    MongoSinkConnector sinkConnector = new MongoSinkConnector();
+    MoostMongoSinkConnector sinkConnector = new MoostMongoSinkConnector();
     Map<String, String> configMap =
         new HashMap<String, String>() {
           {
