@@ -17,7 +17,6 @@
 package com.mongodb.kafka.connect;
 
 import static com.mongodb.kafka.connect.util.ConnectionValidator.validateCanConnect;
-import static com.mongodb.kafka.connect.util.ConnectionValidator.validateUserHasActions;
 import static com.mongodb.kafka.connect.util.ServerApiConfig.validateServerApi;
 import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
@@ -68,14 +67,6 @@ public class MongoSourceConnector extends SourceConnector {
             client -> {
               try {
                 validateServerApi(client, config);
-                validateUserHasActions(
-                    client,
-                    sourceConfig.getConnectionString().getCredential(),
-                    REQUIRED_SOURCE_ACTIONS,
-                    sourceConfig.getString(MongoSourceConfig.DATABASE_CONFIG),
-                    sourceConfig.getString(MongoSourceConfig.COLLECTION_CONFIG),
-                    MongoSourceConfig.CONNECTION_URI_CONFIG,
-                    config);
               } catch (Exception e) {
                 // Ignore
               } finally {
